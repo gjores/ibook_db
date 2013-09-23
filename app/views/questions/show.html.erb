@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+<div class="col-md-5">
+	<p>
+	 
+	 <h3> <%= @question.title %></h3>
+	</p>
+
+	<p>
+	
+	<i>  <%= @question.question_description %></i>
+	</p>
+</div>
+<div class="col-md-7">
+<%= form_for @answer do |f|%>
+	
+	<h3><%= f.label :content, "Skriv ditt svar här", :class=>"thin-label" %>	</h3>
+	<%= f.text_area :content, :class => "form-control wysihtml5" %>	
+	<%= f.hidden_field :question_id, :value => @question.id %>	
+	</br>
+	<%= f.submit "Svara", :class => "btn btn-default"%>
+	
+<% end %>
+</div>
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', questions_path %>
+<script type="text/javascript">
+  $(document).ready(function(){
+
+    $('.wysihtml5').each(function(i, elem) {
+      $(elem).wysihtml5();
+    });
+
+  })
+</script>

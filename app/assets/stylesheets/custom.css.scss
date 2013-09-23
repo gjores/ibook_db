@@ -1,0 +1,15 @@
+body {
+	padding-top: 70px; 
+	background:#F8F8F8;
+	}
+.error_inline{
+	display:inline;
+}
+
+#answer_content:focus{
+	box-shadow:none;
+	border-color: #CCC;
+}
+.thin-label{
+	font-weight:500;
+}

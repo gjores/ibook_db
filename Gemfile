@@ -4,10 +4,13 @@ gem 'rails', '3.2.12'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem 'bootstrap-wysihtml5-rails'
 gem 'sqlite3'
 gem "mongoid", "~> 3.0.0"
-
+gem 'client_side_validations'
+gem 'cancan'
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+                              :github => 'anjlab/bootstrap-rails'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -19,7 +22,7 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
-
+gem 'devise'
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
